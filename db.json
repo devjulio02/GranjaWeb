@@ -1,0 +1,15 @@
+{
+  "galpoes": [
+    {
+      "id": "1",
+      "nome": "Galpão 1",
+      "qtdFrangos": 1000,
+      "qtdComedouros": 34,
+      "qtdBebedouros": 14,
+      "qtdVentiladores": 4,
+      "qtdExaustores": 2,
+      "qtdResponsaveis": 3,
+      "possuiTermometro": true
+    }
+  ]
+}
