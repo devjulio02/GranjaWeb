@@ -20,7 +20,33 @@
       "qtdVentiladores": "4",
       "qtdExaustores": "8",
       "qtdResponsaveis": "4",
+<<<<<<< HEAD
+      "possuiTermometro": false
+    },
+    {
+      "id": "ff63",
+      "nome": "Galpão 3",
+      "qtdFrangos": "3000",
+      "qtdComedouros": "102",
+      "qtdBebedouros": "42",
+      "qtdVentiladores": "16",
+      "qtdExaustores": "8",
+      "qtdResponsaveis": "10",
       "possuiTermometro": true
+    },
+    {
+      "id": "5569",
+      "nome": "galpão 5",
+      "qtdFrangos": "1000",
+      "qtdComedouros": "10",
+      "qtdBebedouros": "10",
+      "qtdVentiladores": "10",
+      "qtdExaustores": "10",
+      "qtdResponsaveis": "2",
+      "possuiTermometro": false
+=======
+      "possuiTermometro": true
+>>>>>>> repo2/main
     }
   ]
 }

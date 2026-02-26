@@ -1,6 +1,12 @@
+import Carousel from "../components/Carousel";
+import Cards from "../components/Cards";
+
 function Home() {
   return (
-    <h1>Página principal</h1>
+    <>
+    <Carousel/>
+    <Cards/>
+    </>
   )
 }
 
