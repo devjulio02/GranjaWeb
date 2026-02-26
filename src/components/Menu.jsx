@@ -15,7 +15,7 @@ function Menu() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/instituicoes">Galpões</Nav.Link>
+            <Nav.Link as={Link} to="/galpoes">Galpões</Nav.Link>
           </Nav>
 
         </Navbar.Collapse>

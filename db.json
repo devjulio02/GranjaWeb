@@ -1,15 +1,26 @@
 {
   "galpoes": [
     {
-      "id": "1",
+      "id": "0320",
       "nome": "Galpão 1",
-      "qtdFrangos": 1000,
-      "qtdComedouros": 34,
-      "qtdBebedouros": 14,
-      "qtdVentiladores": 4,
-      "qtdExaustores": 2,
-      "qtdResponsaveis": 3,
+      "qtdFrangos": "1000",
+      "qtdComedouros": "34",
+      "qtdBebedouros": "14",
+      "qtdVentiladores": "2",
+      "qtdExaustores": "4",
+      "qtdResponsaveis": "2",
       "possuiTermometro": true
+    },
+    {
+      "id": "3fe0",
+      "nome": "Galpão 2",
+      "qtdFrangos": "2000",
+      "qtdComedouros": "68",
+      "qtdBebedouros": "28",
+      "qtdVentiladores": "8",
+      "qtdExaustores": "4",
+      "qtdResponsaveis": "4",
+      "possuiTermometro": false
     }
   ]
 }
