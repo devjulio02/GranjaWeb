@@ -12,14 +12,15 @@
       "possuiTermometro": true
     },
     {
-      "id": "3fe0",
+      "id": "2938",
       "nome": "Galpão 2",
       "qtdFrangos": "2000",
       "qtdComedouros": "68",
       "qtdBebedouros": "28",
-      "qtdVentiladores": "8",
-      "qtdExaustores": "4",
+      "qtdVentiladores": "4",
+      "qtdExaustores": "8",
       "qtdResponsaveis": "4",
+<<<<<<< HEAD
       "possuiTermometro": false
     },
     {
@@ -43,6 +44,9 @@
       "qtdExaustores": "10",
       "qtdResponsaveis": "2",
       "possuiTermometro": false
+=======
+      "possuiTermometro": true
+>>>>>>> repo2/main
     }
   ]
 }
