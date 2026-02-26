@@ -6,15 +6,15 @@ const Carrousel = () => {
     <Container>
        <Carousel>
         <Carousel.Item>
-          <Image className="imagem-carrossel" src="https://blog.mfrural.com.br/wp-content/uploads/2022/05/galinha-caipira-e-de-granja-1090x660.jpg"/>
+          <Image className="imagem-carousel" src="https://blog.mfrural.com.br/wp-content/uploads/2022/05/galinha-caipira-e-de-granja-1090x660.jpg"/>
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image className="imagem-carrossel" src="https://parauapebas.pa.gov.br/wp-content/uploads/2022/10/RRE05405-1024x683.jpg"/>
+          <Image className="imagem-carousel" src="https://parauapebas.pa.gov.br/wp-content/uploads/2022/10/RRE05405-1024x683.jpg"/>
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image className="imagem-carrossel" src="https://opresenterural.com.br/wp-content/uploads/2019/07/ovo-fabrica.jpg"/>
+          <Image className="imagem-carousel" src="https://opresenterural.com.br/wp-content/uploads/2019/07/ovo-fabrica.jpg"/>
         </Carousel.Item>
       </Carousel>
     </Container>

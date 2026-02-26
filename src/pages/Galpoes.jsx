@@ -69,10 +69,7 @@ const Galpoes = () => {
       },
       body: JSON.stringify(novoGalpao)
     })
-    .then(() => {
-      carregarGalpoes(); 
-      handleClose(); 
-    })
+
     .catch((error) => console.log('Erro ao salvar:', error));
   };
 
@@ -133,7 +130,10 @@ const Galpoes = () => {
             </tr>
           ))}
         </tbody>
-      </Table>
+      </Table>    .then(() => {
+      carregarGalpoes(); 
+      handleClose(); 
+    })
 
       {/* MODAL DE CADASTRO */}
       <Modal show={show} onHide={handleClose} size="lg">

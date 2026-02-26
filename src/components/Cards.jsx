@@ -1,4 +1,4 @@
-import { Container, Button, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import "../components/style/Cards.css";
 
 const Cards = () => {
