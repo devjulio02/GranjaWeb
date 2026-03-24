@@ -1,52 +1,26 @@
 {
   "galpoes": [
     {
-      "id": "0320",
-      "nome": "Galpão 1",
-      "qtdFrangos": "1000",
+      "id": "bd36",
+      "nome": "galpão 5",
+      "qtdFrangos": "1100",
       "qtdComedouros": "34",
       "qtdBebedouros": "14",
       "qtdVentiladores": "2",
       "qtdExaustores": "4",
-      "qtdResponsaveis": "2",
+      "qtdResponsaveis": "1",
       "possuiTermometro": true
     },
     {
-      "id": "2938",
-      "nome": "Galpão 2",
-      "qtdFrangos": "2000",
-      "qtdComedouros": "68",
-      "qtdBebedouros": "28",
-      "qtdVentiladores": "4",
-      "qtdExaustores": "8",
-      "qtdResponsaveis": "4",
-<<<<<<< HEAD
-      "possuiTermometro": false
-    },
-    {
-      "id": "ff63",
-      "nome": "Galpão 3",
-      "qtdFrangos": "3000",
-      "qtdComedouros": "102",
-      "qtdBebedouros": "42",
-      "qtdVentiladores": "16",
-      "qtdExaustores": "8",
-      "qtdResponsaveis": "10",
+      "id": "66f6",
+      "nome": "Galpão 1",
+      "qtdFrangos": "1100",
+      "qtdComedouros": "34",
+      "qtdBebedouros": "14",
+      "qtdVentiladores": "2",
+      "qtdExaustores": "4",
+      "qtdResponsaveis": "1",
       "possuiTermometro": true
-    },
-    {
-      "id": "5569",
-      "nome": "galpão 5",
-      "qtdFrangos": "1000",
-      "qtdComedouros": "10",
-      "qtdBebedouros": "10",
-      "qtdVentiladores": "10",
-      "qtdExaustores": "10",
-      "qtdResponsaveis": "2",
-      "possuiTermometro": false
-=======
-      "possuiTermometro": true
->>>>>>> repo2/main
     }
   ]
 }

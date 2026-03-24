@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Button, Container, Form, Modal, Row, Col, Table } from 'react-bootstrap';
+import { Button, Container, Row, Col} from 'react-bootstrap';
+import TabelaGalpoes from '../components/TabelaGalpoes';
+import ModalAddDel from '../components/ModalAddDel';
 
 const Galpoes = () => {
   const [galpoes, setGalpoes] = useState([]);
@@ -15,6 +17,7 @@ const Galpoes = () => {
   // Estados para o Modal de Exclusão
   const [showDelete, setShowDelete] = useState(false);
   const [idParaDeletar, setIdParaDeletar] = useState("");
+  
   const handleCloseDelete = () => {
     setShowDelete(false);
     setIdParaDeletar(""); // Limpa a seleção ao fechar
@@ -69,7 +72,10 @@ const Galpoes = () => {
       },
       body: JSON.stringify(novoGalpao)
     })
-
+    .then(() => {
+      carregarGalpoes(); 
+      handleClose(); 
+    })
     .catch((error) => console.log('Erro ao salvar:', error));
   };
 
@@ -103,140 +109,10 @@ const Galpoes = () => {
         </Col>
       </Row>
 
-      <Table striped bordered hover responsive>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Frangos</th>
-            <th>Comedouros</th>
-            <th>Bebedouros</th>
-            <th>Ventiladores</th>
-            <th>Exaustores</th>
-            <th>Responsáveis</th>
-            <th>Termômetro</th>
-          </tr>
-        </thead>
-        <tbody>
-          {galpoes.map((galpao) => (
-            <tr key={galpao.id}>
-              <td>{galpao.nome}</td>
-              <td>{galpao.qtdFrangos}</td>
-              <td>{galpao.qtdComedouros}</td>
-              <td>{galpao.qtdBebedouros}</td>
-              <td>{galpao.qtdVentiladores}</td>
-              <td>{galpao.qtdExaustores}</td>
-              <td>{galpao.qtdResponsaveis}</td>
-              <td>{galpao.possuiTermometro ? 'Sim' : 'Não'}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>    .then(() => {
-      carregarGalpoes(); 
-      handleClose(); 
-    })
-
-      {/* MODAL DE CADASTRO */}
-      <Modal show={show} onHide={handleClose} size="lg">
-        <Modal.Header closeButton>
-          <Modal.Title>Cadastrar Novo Galpão</Modal.Title>
-        </Modal.Header>
-        <Form onSubmit={handleSubmit}>
-          <Modal.Body>
-            <Row>
-              <Col md={6}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Nome do Galpão</Form.Label>
-                  <Form.Control type="text" name="nome" value={novoGalpao.nome} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Quantidade de Frangos</Form.Label>
-                  <Form.Control type="number" name="qtdFrangos" value={novoGalpao.qtdFrangos} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Qtd. Comedouros</Form.Label>
-                  <Form.Control type="number" name="qtdComedouros" value={novoGalpao.qtdComedouros} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Qtd. Bebedouros</Form.Label>
-                  <Form.Control type="number" name="qtdBebedouros" value={novoGalpao.qtdBebedouros} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Qtd. Ventiladores</Form.Label>
-                  <Form.Control type="number" name="qtdVentiladores" value={novoGalpao.qtdVentiladores} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Qtd. Exaustores</Form.Label>
-                  <Form.Control type="number" name="qtdExaustores" value={novoGalpao.qtdExaustores} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={4}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Qtd. Responsáveis</Form.Label>
-                  <Form.Control type="number" name="qtdResponsaveis" value={novoGalpao.qtdResponsaveis} onChange={handleChange} required />
-                </Form.Group>
-              </Col>
-              <Col md={4} className="d-flex align-items-center">
-                <Form.Group className="mb-3 mt-4">
-                  <Form.Check type="checkbox" label="Possui termômetro de ambiente?" name="possuiTermometro" checked={novoGalpao.possuiTermometro} onChange={handleChange} />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Cancelar
-            </Button>
-            <Button variant="primary" type="submit">
-              Salvar Galpão
-            </Button>
-          </Modal.Footer>
-        </Form>
-      </Modal>
-
-      {/* MODAL DE EXCLUSÃO */}
-      <Modal show={showDelete} onHide={handleCloseDelete}>
-        <Modal.Header closeButton>
-          <Modal.Title>Excluir Galpão</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form.Group>
-            <Form.Label>Selecione o galpão que deseja remover:</Form.Label>
-            <Form.Select 
-              value={idParaDeletar} 
-              onChange={(e) => setIdParaDeletar(e.target.value)}
-            >
-              <option value="">Selecione...</option>
-              {galpoes.map((galpao) => (
-                <option key={galpao.id} value={galpao.id}>
-                  {galpao.nome}
-                </option>
-              ))}
-            </Form.Select>
-          </Form.Group>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseDelete}>
-            Cancelar
-          </Button>
-          <Button 
-            variant="danger" 
-            onClick={handleConfirmDelete} 
-            disabled={!idParaDeletar} // Fica inativo se não selecionar nada
-          >
-            Confirmar Exclusão
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <TabelaGalpoes addGalpao = {galpoes}/>
+      <ModalAddDel show = {show} showDelete = {showDelete} handleChange = {handleChange} 
+      handleSubmit = {handleSubmit} handleConfirmDelete = {handleConfirmDelete} novoGalpao = {novoGalpao}
+      listaDeGalpoes = {galpoes} idParaDeletar = {idParaDeletar} setIdParaDeletar = {setIdParaDeletar} />
     </Container>
   );
 };
